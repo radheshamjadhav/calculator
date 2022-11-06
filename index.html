@@ -1,1 +1,518 @@
+<!-- Created by radhesham -->
 
+<!DOCTYPE html>
+
+<!--
+
+   MADE BY RJ
+   
+   
+   Update 2
+    
+    > More buttons added
+    > New theme added
+    > Pre ES6 evironment support
+    > New Dark Mode
+    
+  -->
+
+<html>
+    <head>
+        <title>Calculator</title>
+        <link href='https://fonts.googleapis.com/css?family=VT323|Cute Font' rel='stylesheet'>
+        
+<style>
+            /* Created by radhesham */
+
+
+
+html {
+  scroll-behavior: smooth;
+  
+  /*
+  
+   MADE BY RJ 
+   
+  */
+}
+body {
+    text-align: -webkit-center;
+    background-image: url(https://images.unsplash.com/photo-1458682625221-3a45f8a844c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=2967&q=800); background-attachment: fixed;
+    background-position:  center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Cute Font'!important;
+      -webkit-user-select: none; /* Safari 3.1+ */
+      -moz-user-select: none; /* Firefox 2+ */
+      -ms-user-select: none; /* IE 10+ */
+      user-select: none; /* Standard syntax */
+      transition: 1s;
+}
+*{
+    outline: none;
+    
+}
+.topnav {
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin:0;
+    width: 100%;
+    border-radius: 50px;
+    animation: animatebottom 1s cubic-bezier(1, -0.06, 0.26, 1.06);
+  -webkit-animation: animatebottom 1s cubic-bezier(1, -0.06, 0.26, 1.06);
+}
+
+.topnav span {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnav span:hover {
+  background-color: #555;
+  color: #fff;
+}
+.s{
+    background-color: #e361c8;
+}
+.btm{
+    background: #eab93c ;
+}
+.side{
+    background: #aeaefc ;
+}
+  footer{
+      box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.34);
+     text-align:-webkit-center;
+    border: 2px solid rgba(0,0,0,0);
+    width: 90%;
+    background-color:white;
+    padding:10px;
+    font-size: 20px;
+    border-radius: 50px!important;
+    transition: 1s;
+    /*cursor: pointer;*/
+ }
+ footer:active{
+     background:rgba(0,0,0,0);
+     border: 3px solid white;
+     color: white!important;
+ }
+   a{
+    text-decoration:none;
+    color: #e361c8;
+}
+   footer a::after{
+    content: "Radhesham";
+}
+#foo{
+    background: rgba(255,255,255,0.3) ;
+    color: white;
+}
+main {
+    transition: 1s;
+     padding: 10px;
+width: 320px;
+    
+    border: 1px solid rgba(0, 0, 0, 0);
+    box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.45);
+    background-color:black ;
+  animation: animatebottom 2s cubic-bezier(1, -0.06, 0.26, 1.06);
+  -webkit-animation: animatebottom 2s cubic-bezier(1, -0.06, 0.26, 1.06);
+  border-radius: 10px;
+}
+@-webkit-keyframes animatebottom {
+0% {
+
+    margin-top:200px;
+}
+
+
+
+100% {
+
+    margin-top:0px;
+}
+}
+
+@keyframes animatebottom { 
+0% {
+
+    margin-top:200px;
+}
+
+
+
+100% {
+
+    margin-top:0px;
+}
+}
+ button{
+    background-color: #21e054; 
+    border: none;
+    border-radius: 5px;
+    border: 5px solid rgba(0,0,0,.0);
+    /* height: 41px; */
+    padding: 0px;
+    color: white;
+    width: 60px;
+    font-size: 20px;
+    outline: none;
+    font-family: 'Cute Font'!important;
+    font-size: 25px;
+    transition: all .0s ease;
+}
+    hr {
+    border: 5px solid  rgba(255,255,255,0.3) ;
+    background: rgba(255,255,255,0.3) ;
+    border-radius: 1px!important;
+}
+ button:active{
+        background-color: #757575;
+}
+ input{
+    background-color: #e3e3e3;
+    box-sizing: border-box ;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+    width: 100%;
+    padding: 25px;
+    height: 25px;
+    border: none;
+    border: 5px solid rgba(0,0,0,.1);
+  
+font-family: 'Cute Font'!important;
+  font-size: 30px;
+}
+input:focus{
+    Background-color:rgba(255,255,255,0.2) !important;
+}
+table,tr{
+    text-align:-webkit-center;
+    border: none;
+    width: 100%;
+    background-color:white;
+    
+}
+h1{
+        font-size: 35px;
+    color:white;
+    animation: animatebottom 1.5s cubic-bezier(1, -0.06, 0.26, 1.06);
+  -webkit-animation: animatebottom 1.5s cubic-bezier(1, -0.06, 0.26, 1.06);
+}
+        </style>
+       
+    </head>
+    <body>
+        <div class="topnav">
+        <span style="float: left;border-right: 0px solid #fff ;color: #fff"><b>
+        <a href ="#calcu" style="color:#fff;"> Calculator </a>  </b></span>
+            <span onclick="settings(this)" id="fst">Turn Dark Mode On</span>  
+            <span onclick="dm(this)" id="dm1" style="display:none;">Turn Dark Mode Off</span>
+        </div>
+
+<h1>Calculator</h1>
+<hr>
+<br>
+        <main id="calcu">
+        <br>     <input  id="text1" placeholder="0" style="text-align: right;
+                        width: 95%;" > <br><br>
+
+             
+                 <button type="button" value="1" onClick="event1(this.value)">1</button> 
+                 <button type="button" value="2" onClick="event1(this.value)">2</button> 
+                 <button type="button" value="3" onClick="event1(this.value)">3</button>
+<button type="button" value="4" onClick="event1(this.value)">4</button> 
+                 <button type="button" value=" X "  onClick="event1(this.value)" class="side" >X</button>   <br><br>
+
+                
+
+                   
+                
+                <button type="button" value="5" onClick="event1(this.value)">5</button>
+                <button type="button" value="6" onClick="event1(this.value)">6</button>
+<button type="button" value="7" onClick="event1(this.value)">7</button>
+                <button type="button" value="8" onClick="event1(this.value)">8</button> 
+               
+                <button type="button" value="-" onclick="event1(this.value)" class="side" >-</button><br><br>
+                
+             <button type="button" value="9" onClick="event1(this.value)">9</button>
+              <button type="button" value="0" onClick="event1(this.value)" class="s">0</button>
+                <button onclick="backspace()" class="s"><</button>
+                <button type="button" value="." onClick="event1(this.value)" class="s">.</button>
+                <button type="button" value="/" onClick="event1(this.value)" class="side" >/</button> 
+                <br><br>
+
+
+                
+                <button type="button" value="00" onClick="square()" class="btm" >x^y</button>
+                <button onClick="clear_screen()" class="btm" >Clear</button>
+                <button onClick="sr()" class="btm">√</button>         
+                <button type="button" rowspan="2"  onClick="
+      try{
+        event2();
+       }
+      catch(e){
+        $('text1').value='Invalid Input';
+        shake();
+        
+      }
+               " 
+  class="side">=</button>
+              <button type="button" value="+"  onClick="event1(this.value)" class="side" >+</button>
+                 <br><br>
+
+<button onClick="cr()" class="btm">3√</button>   
+
+
+<button onClick=" s() " class="btm">Sin</button>  
+
+<button onClick=" c() " class="btm">Cos</button>  
+
+<button onClick=" t()" class="btm">Tan</button>  
+
+<button onClick="event1('00')" class="s">00</button>  
+ <br /><br />
+    </main>
+    <br><br>
+    <footer onclick="profile()" id="foo">
+          &copy; &nbsp; 2019  RJ;
+    <a href="www.google.com" id="about"></a>
+    </footer>  <br><br>  <br><br>
+    <script>
+   function $(id){
+       return document.getElementById(id);
+    }
+    document.Element = function(id)
+    {
+        return {
+            clear: function()
+            {
+                $(id).value="";
+            },
+            content: function(){
+                return $(id);
+            }
+        }
+    };
+    
+    // Created by radhesham
+
+//Check ES6 Support
+var IS_ES6_SUPPORTED;
+  /* 
+  
+    MADE BY radhesham 
+    
+  */
+try {
+ new Function("(a = 0) => a");
+     IS_ES6_SUPPORTED = true; 
+  } catch (err) { 
+     IS_ES6_SUPPORTED = false;
+  }
+  if (!Math.cbrt) { 
+  Math.cbrt = function(num) { 
+  
+  return Math.pow(num,1/3).toFixed(4);
+
+   
+   }
+    }
+  var inpcol = "#555";
+function settings(ff){
+    ff.style.display="none";
+    $("dm1").style.display="block";
+   $("btns").innerHTML="button{Background-color: rgba(255,255,255,0.2)!important;}button:hover, button:active{Background-color: rgba(255, 152, 0, 0.69)!important}"; document.body.style.background="linear-gradient(to bottom right,#666,#111)";
+    $("calcu").style.background="transparent";
+    $("foo").style.background="transparent";
+    $("foo").style.color="white";
+    $("text1").style.color="white";
+    inpcol="white";
+    $("text1").style.background="rgba(255,255,255,0.2)";
+}
+function dm(ev){
+    ev.style.display="none";
+    $("fst").style.display="block";
+    $("btns").innerHTML=""; document.body.style.background="linear-gradient(to bottom right,#8181FE,#03ff8c)";
+    $("calcu").style.background="black";
+    $("foo").style.background="white";
+    $("foo").style.color="#555";
+    inpcol ="#555"
+    $("text1").style.color="#555";
+    $("text1").style.background="#e3e3e3";
+}
+// For adding value to input
+function event1(x){
+    if( $("text1").value=="Invalid Input" ){
+     clear_screen();
+    }
+    
+            $("text1").value+=x;
+            
+    }
+
+// For main calculation
+    function event2(){
+    if($("text1").value.trim()==""){
+        $("text1").value=0;
+    }
+       $("text1").value = $("text1").value.replace(/[X]/gim,"*");
+       $("text1").value= eval($("text1").value);
+    }
+
+// Clear screen function
+function clear_screen(){
+   var elem = document.Element("text1").clear();
+}
+
+// Function for back button (<--)
+function backspace(){
+ if( $("text1").value=="Invalid Input" ){
+     clear_screen();
+    }
+    var x = $("text1").value;
+    var y = x;
+    var str = y.slice(0, -1);
+    $("text1").value= str ;
+}
+
+// Open profile ("https://www.youtube.com")
+function profile(){
+    $("about").click();
+}
+
+// Function for square root
+function sr(){
+    var x = $("text1").value;
+    if( x == "Invalid Input"){
+     clear_screen();
+    }
+    if(x==null||x==""){
+        x = 0;
+    }
+    $("text1").value = "sqrt("+x+")";
+}
+
+function sqrt(val){
+    return Math.sqrt(val);
+}
+
+// Function for square
+function square(){
+    var x = $("text1").value;
+  if( x == "Invalid Input"){
+     clear_screen();
+   }
+ if(IS_ES6_SUPPORTED){
+    $("text1").value +="**";
+ }else{
+  
+  if( x == "Invalid Input"){
+     clear_screen();
+    }
+    if( x==null||x=="" ){
+        x = 0;
+    }
+    var y = prompt("Enter Power");
+    $("text1").value = "pow("+x+","+y+")";
+    }
+}
+
+function pow(base,power){
+    return Math.pow(base,power);
+}
+
+// shake calculator in invalid input
+function shake(){
+   $("text1").style.color="red";
+   $("text1").style.transition="0s";
+   $("calcu").style.transition="0s";
+   $("calcu").style.marginLeft="20px";
+   setTimeout(s1,20);
+   
+
+}
+function s1(){
+   $("calcu").style.marginLeft="0px";
+   $("calcu").style.marginRight="20px";
+   setTimeout(s2,20);
+}
+function s2(){
+    $("calcu").style.marginRight="0px";
+    setTimeout(s3,20);
+}
+function s3(){
+   $("calcu").style.marginLeft="0px";
+   $("calcu").style.marginRight="20px";
+   setTimeout(s4,20);
+}
+function s4(){
+    $("text1").style.color=inpcol;
+    $("calcu").style.marginRight="0px";
+    $("text1").style.transition="all 0.5s ease";
+}
+
+// cube root
+function cr(){
+    var x = $("text1").value;
+    if( x == "Invalid Input"){
+     clear_screen();
+    }
+    if(x==null||x==""){
+        x = 0;
+    }
+    $("text1").value = "cbrt("+x+")";
+}
+//sin
+function s(){
+    var x = $("text1").value;
+    if( x == "Invalid Input"){
+     clear_screen();
+    }
+    if(x==null||x==""){
+        x = 0;
+    }
+    $("text1").value = "sin("+x+")";
+}
+//cos
+function c(){
+    var x = $("text1").value;
+    if( x == "Invalid Input"){
+     clear_screen();
+    }
+    if(x==null||x==""){
+        x = 0;
+    }
+    $("text1").value = "cos("+x+")";
+}
+//tan
+function t(){
+    var x = $("text1").value;
+    if( x == "Invalid Input"){
+     clear_screen();
+    }
+    if(x==null||x==""){
+        x = 0;
+    }
+    $("text1").value = "tan("+x+")";
+}
+function cbrt(made_by_rj){
+    return Math.cbrt(made_by_rj);
+}
+function sin( made_by_rj ){
+    return Math.sin( made_by_rj )
+}
+function cos( made_by_rj ){
+    return Math.cos( made_by_rj )
+}
+function tan( made_by_rj ){
+    return Math.tan( made_by_rj)
+}
+    </script>
+    </body>
+</html>
